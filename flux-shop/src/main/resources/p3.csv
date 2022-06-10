@@ -1,0 +1,4 @@
+Number of records, Number of threads, number of request/second, Action(methods), Total time in nano second), ProjectType
+
+500,1,1,DELETE_ALL,449642800,0.4496428,WEB_FLUX
+500,1,1,DELETE_ALL,454993100,0.4549931,SPRING_MVC
