@@ -17,12 +17,14 @@ public class RequiredAttribute {
     private int numberOfRequestPerSecond;
     private String action;
     private List<Long> times;
+    private ProjectType type;
 
-    public RequiredAttribute(int numberOfRecords, int numberOfThreads, int numberOfRequestPerSecond, String action){
+    public RequiredAttribute(int numberOfRecords, int numberOfThreads, int numberOfRequestPerSecond, String action,ProjectType type){
         this.numberOfRecords = numberOfRecords;
         this.numberOfThreads = numberOfThreads;
         this.numberOfRequestPerSecond = numberOfRequestPerSecond;
         this.action = action;
+        this.type = type;
         this.times = new ArrayList<>();
     }
 
@@ -32,4 +34,10 @@ public class RequiredAttribute {
     public void addAll(List<Long> times){
         this.times = times;
     }
+
+
+}
+
+enum ProjectType {
+    WEB_FLUX, SPRING_BOOT
 }

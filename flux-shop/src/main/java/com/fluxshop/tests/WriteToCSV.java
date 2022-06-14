@@ -29,7 +29,7 @@ public class WriteToCSV {
 
     public void givenDataArray_whenConvertToCSV_thenOutputCreated(RequiredAttribute result) throws IOException, UnsupportedEncodingException {
         List<String[]> dataLines = new ArrayList<>();
-        dataLines.add(new String[]{"Number of records", "Number of threads", "number of request/second", "Action(methods)", "Total time in nano second)" });
+        dataLines.add(new String[]{"Number of records", "Number of threads", "number of request/second", "Action(methods)", "Total time in nano second)", "Project Type" });
         dataLines.add(new String[]{String.valueOf(result.getNumberOfRecords()), String.valueOf(result.getNumberOfThreads()), String.valueOf(result.getNumberOfRequestPerSecond()), result.getAction(), String.valueOf(result.getTimes())});
         File csvOutputFile = new File(RELATIVE_PATH);
         try (PrintWriter pw = new PrintWriter(csvOutputFile)) {
